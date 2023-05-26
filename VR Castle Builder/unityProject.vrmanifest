@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrcastlebuilder.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Isa\\Documents\\Unity Projects\\Medieval Castle Builder\\VR-Castle-Builder\\VR Castle Builder\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VR Castle Builder [Testing]"
+        }
+      }
+    }
+  ]
+}
