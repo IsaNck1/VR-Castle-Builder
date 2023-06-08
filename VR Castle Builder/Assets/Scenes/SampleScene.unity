@@ -1384,11 +1384,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 1482118246}
+  tisch: {fileID: 1394251590}
   scene: {fileID: 400944572}
   player: {fileID: 442359644}
   innenAnsicht: 1
   outerScale: 0.028571429
-  outerPositionY: 1
+  outerPositionY: 0
+  entfernungZumTisch: 1.3
 --- !u!4 &836113202
 Transform:
   m_ObjectHideFlags: 0
