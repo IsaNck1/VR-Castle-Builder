@@ -73,7 +73,8 @@ public class BuildingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             Vector3 mouseWorldPosition = GetMouseWorldPosition(5f);
-            Instantiate(activebuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+            Transform instantiatedObject = Instantiate(activebuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+            instantiatedObject.SetParent(GameObject.Find("Teleportierte Scene").transform, false);
         }
     }
 
