@@ -132,7 +132,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.93960756
+  - screenRelativeHeight: 0.80078566
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3051304621746454035}
@@ -205,7 +205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7086895678073580766, guid: 0e292257e9c50b640891e3f3f35b78e5, type: 3}
+  - {fileID: 2100000, guid: dc61f5aeca15a2c42a95bc2fb160db51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
