@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 112232503cdbe864f9b41389fdbeb72d, type: 3}
+  m_Script: {fileID: 11500000, guid: e641f3513113017469592eb1071f25fa, type: 3}
   m_Name: StoneGate
   m_EditorClassIdentifier: 
   prefab: {fileID: 4418197606433600705, guid: 17ad28ff06d52cd41ab44e6a0f3ec5b2, type: 3}

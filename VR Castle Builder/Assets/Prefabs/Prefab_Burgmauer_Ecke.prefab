@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7652039637243385215}
   - component: {fileID: -1278774238358665307}
-  - component: {fileID: 3410922802687210068}
+  - component: {fileID: 8738742518763602290}
   m_Layer: 0
   m_Name: Prefab_Burgmauer_Ecke
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5887663, y: 3.0004854, z: 1.6981881}
   m_Center: {x: -0.7465848, y: 1.5216863, z: -0.7237438}
---- !u!114 &3410922802687210068
+--- !u!114 &8738742518763602290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7024015829459636165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76fcbf555c729748a9964d26e4dc7d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d784756641be774d8ebf8bed4483f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7873778793806516503

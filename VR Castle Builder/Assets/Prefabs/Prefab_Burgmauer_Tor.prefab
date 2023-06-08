@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4418197606433600705}
-  - component: {fileID: 2947340814824628003}
   - component: {fileID: 9183104717157547208}
+  - component: {fileID: 1592472552469587083}
   m_Layer: 0
   m_Name: Prefab_Burgmauer_Tor
   m_TagString: Untagged
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2947340814824628003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3898789053906349691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76fcbf555c729748a9964d26e4dc7d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &9183104717157547208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,6 +48,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1144838, y: 2.919818, z: 0.8784517}
   m_Center: {x: -0.02162671, y: 1.4439127, z: -0.36084133}
+--- !u!114 &1592472552469587083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898789053906349691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d784756641be774d8ebf8bed4483f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4189577779118485673
 GameObject:
   m_ObjectHideFlags: 0
