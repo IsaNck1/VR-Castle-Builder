@@ -72,9 +72,14 @@ public class BuildingManager : MonoBehaviour
         //Spawn activebuildingType
         if (Input.GetKeyDown(KeyCode.T))
         {
+            Perspektivenwechsel p = GameObject.Find("Perspektivenwechsel").GetComponent<Perspektivenwechsel>();
+            p.Toggle();
+
             Vector3 mouseWorldPosition = GetMouseWorldPosition(5f);
             Transform instantiatedObject = Instantiate(activebuildingType.prefab, mouseWorldPosition, Quaternion.identity);
-            instantiatedObject.SetParent(GameObject.Find("Teleportierte Scene").transform, false);
+            instantiatedObject.SetParent(GameObject.Find("Scene").transform, false);
+
+            p.Toggle();
         }
     }
 

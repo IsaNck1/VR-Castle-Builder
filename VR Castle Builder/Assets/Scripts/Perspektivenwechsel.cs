@@ -32,23 +32,33 @@ public class Perspektivenwechsel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("k"))
-        {
+		Toggle();
+    }
+
+	public void Toggle()
+    {
+		if (Input.GetKeyDown("k"))
+		{
 			innenAnsicht = !innenAnsicht;
-            if (terrain != null) terrain.SetActive(innenAnsicht);
+			if (terrain != null) terrain.SetActive(innenAnsicht);
 			if (tisch != null) tisch.SetActive(!innenAnsicht);
-			if (scene != null && player != null) {
-				if(innenAnsicht) {
+			if (scene != null && player != null)
+			{
+				if (innenAnsicht)
+				{
 					// Teleportiere Burg an die Position des Spielers
-					scene.transform.localPosition = player.transform.position;
-					scene.transform.localScale = new Vector3(1,1,1);
-				} else {
+					// scene.transform.localPosition = player.transform.position;
+					scene.transform.localPosition = new Vector3(0, 0, 0);
+					scene.transform.localScale = new Vector3(1, 1, 1);
+				}
+				else
+				{
 					// Schrumpfe Burg und platziere sie vorm Spieler
-					scene.transform.localPosition = player.transform.position + entfernungZumTisch * player.transform.forward + new Vector3(0,outerPositionY,0);
-					scene.transform.localEulerAngles = new Vector3(0,player.transform.eulerAngles.y,0);
-					scene.transform.localScale = new Vector3(outerScale,outerScale,outerScale);
+					scene.transform.localPosition = player.transform.position + entfernungZumTisch * player.transform.forward + new Vector3(0, outerPositionY, 0);
+					scene.transform.localEulerAngles = new Vector3(0, player.transform.eulerAngles.y, 0);
+					scene.transform.localScale = new Vector3(outerScale, outerScale, outerScale);
 				}
 			}
-        }
-    }
+		}
+	}
 }
