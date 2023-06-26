@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class Perspektivenwechsel : MonoBehaviour
 {
@@ -32,33 +33,48 @@ public class Perspektivenwechsel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Toggle();
-    }
+		if (Input.GetKeyDown("k"))
+		{
+			ToggleActivate();
+		}
+	}
 
 	public void Toggle()
     {
-		if (Input.GetKeyDown("k"))
-		{
-			innenAnsicht = !innenAnsicht;
-			if (terrain != null) terrain.SetActive(innenAnsicht);
-			if (tisch != null) tisch.SetActive(!innenAnsicht);
-			if (scene != null && player != null)
+			for (int handIndex = 0; handIndex < Player.instance.hands.Length; handIndex++)
 			{
-				if (innenAnsicht)
+				Hand hand = Player.instance.hands[handIndex];
+				if (hand != null)
 				{
-					// Teleportiere Burg an die Position des Spielers
-					// scene.transform.localPosition = player.transform.position;
-					scene.transform.localPosition = new Vector3(0, 0, 0);
-					scene.transform.localScale = new Vector3(1, 1, 1);
-				}
-				else
-				{
-					// Schrumpfe Burg und platziere sie vorm Spieler
-					scene.transform.localPosition = player.transform.position + entfernungZumTisch * player.transform.forward + new Vector3(0, outerPositionY, 0);
-					scene.transform.localEulerAngles = new Vector3(0, player.transform.eulerAngles.y, 0);
-					scene.transform.localScale = new Vector3(outerScale, outerScale, outerScale);
+					ToggleActivate();
 				}
 			}
-		}
 	}
+
+	public void ToggleActivate()
+	{
+
+		innenAnsicht = !innenAnsicht;
+		if (terrain != null) terrain.SetActive(innenAnsicht);
+		if (tisch != null) tisch.SetActive(!innenAnsicht);
+		if (scene != null && player != null)
+		{
+			if (innenAnsicht)
+			{
+				// Teleportiere Burg an die Position des Spielers
+				// scene.transform.localPosition = player.transform.position;
+				scene.transform.localPosition = new Vector3(0, 0, 0);
+				scene.transform.localScale = new Vector3(1, 1, 1);
+			}
+			else
+			{
+				// Schrumpfe Burg und platziere sie vorm Spieler
+				scene.transform.localPosition = player.transform.position + entfernungZumTisch * player.transform.forward + new Vector3(0, outerPositionY, 0);
+				scene.transform.localEulerAngles = new Vector3(0, player.transform.eulerAngles.y, 0);
+				scene.transform.localScale = new Vector3(outerScale, outerScale, outerScale);
+			}
+		}
+
+	}
+
 }
