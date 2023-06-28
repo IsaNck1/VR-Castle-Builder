@@ -535,7 +535,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Hauptmenu
+  m_Text: Main Menu
 --- !u!222 &243588547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3398,6 +3398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0095
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136213087988178285, guid: 50fed424e02891149b0bfb0ad6a0db8e,
+        type: 3}
+      propertyPath: m_Text
+      value: Change Scene
       objectReference: {fileID: 0}
     - target: {fileID: 1136213087988178285, guid: 50fed424e02891149b0bfb0ad6a0db8e,
         type: 3}
