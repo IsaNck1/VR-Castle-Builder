@@ -5,15 +5,6 @@ using Valve.VR.InteractionSystem;
 
 public class Perspektivenwechsel : MonoBehaviour
 {
-	
-	// Baumeister.cs
-	/* public Perspektivenwechsel wechsel; // PW da reinziehen
-	update(){
-		...
-		if(!wechsel.innenAnsicht) bauen();
-		...
-	}*/
-
     public GameObject terrain;
 	public GameObject tisch;
 	public GameObject scene;
@@ -24,10 +15,8 @@ public class Perspektivenwechsel : MonoBehaviour
 	public float outerPositionY = 1.0f;
 	public float entfernungZumTisch = 1.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -62,19 +51,19 @@ public class Perspektivenwechsel : MonoBehaviour
 			if (innenAnsicht)
 			{
 				// Teleportiere Burg an die Position des Spielers
-				// scene.transform.localPosition = player.transform.position;
 				scene.transform.localPosition = new Vector3(0, 0, 0);
 				scene.transform.localScale = new Vector3(1, 1, 1);
 			}
 			else
 			{
-				// Schrumpfe Burg und platziere sie vorm Spieler
-				scene.transform.localPosition = player.transform.position + entfernungZumTisch * player.transform.forward + new Vector3(0, outerPositionY, 0);
+				// Schrumpfe Burg und platziere sie vor Spieler
+				scene.transform.localPosition = 
+					player.transform.position + 
+					entfernungZumTisch * player.transform.forward + 
+					new Vector3(0, outerPositionY, 0);
 				scene.transform.localEulerAngles = new Vector3(0, player.transform.eulerAngles.y, 0);
 				scene.transform.localScale = new Vector3(outerScale, outerScale, outerScale);
 			}
 		}
-
 	}
-
 }
